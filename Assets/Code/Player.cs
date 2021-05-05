@@ -10,8 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField] float playerLazerSpeed = 20.0f;
     [SerializeField] float playerShotTimeBeweenShots = 0.1f;
 
-    Coroutine playerFiringCoroutine;
-
+    Coroutine KBFiringCoroutine;
+    Coroutine GamePadFiringCoroutine;
     // Boundaries for player movement on the board
     float playerXMin;
     float playerXMax;
@@ -35,16 +35,33 @@ public class Player : MonoBehaviour
     }
     private void PlayerShoot()
     {
+        KBFire();
+        GamePadFire();
 
+    }
+
+    private void KBFire()
+    {
         if (Input.GetButtonDown("Fire1"))
         {
-           playerFiringCoroutine = StartCoroutine(ShootContinuously());
+            KBFiringCoroutine = StartCoroutine(ShootContinuously());
         }
         if (Input.GetButtonUp("Fire1"))
         {
-            StopCoroutine(playerFiringCoroutine);
+            StopCoroutine(KBFiringCoroutine);
         }
-        
+    }
+
+    private void GamePadFire()
+    {
+        if (Input.GetButtonDown("PadFire"))
+        {
+            GamePadFiringCoroutine = StartCoroutine(ShootContinuously());
+        }
+        if (Input.GetButtonUp("PadFire"))
+        {
+            StopCoroutine(GamePadFiringCoroutine);
+        }
     }
 
     IEnumerator ShootContinuously()
