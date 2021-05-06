@@ -6,12 +6,14 @@ public class EnemyPathing : MonoBehaviour
 {
     // Because we are working with the coords to move the enemies, we need a list of coords....or the transform of each
     // object. 
-    [SerializeField] List<Transform> waypoints;
+    [SerializeField] WaveConfig waveConfig;
+    List<Transform> waypoints;
     [SerializeField] float moveSpeed = 2f;
     int currentWaypoint = 0;
     // Start is called before the first frame update
     void Start()
     {
+        waypoints = waveConfig.GetPathWaypoints();
         transform.position = waypoints[currentWaypoint].transform.position;
     }
 
