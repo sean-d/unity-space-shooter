@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("PLayer")]
     [SerializeField] float moveSpeed = 10.0f;
+    [SerializeField] float health = 200f;
+
+    [Header("Weapon")]
     [SerializeField] GameObject playerBlueLazer;
     [SerializeField] float playerLazerSpeed = 20.0f;
     [SerializeField] float playerShotTimeBeweenShots = 0.1f;
@@ -33,6 +37,23 @@ public class Player : MonoBehaviour
         Move();
         PlayerShoot();
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        DamageDealer damageDealer = other.GetComponent<DamageDealer>();
+        ProcessHit(damageDealer);
+    }
+
+    private void ProcessHit(DamageDealer damageDealer)
+    {
+        health -= damageDealer.GetDamage();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void PlayerShoot()
     {
         KBFire();

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1dccdf1005fb8329d8ce7164b8f912, type: 3}
-  m_Name: Start Wave
+  m_Name: Figure 8 Wave
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1998663138033954445, guid: 03ce69696f2cdeeec967c9e26e4a1f5e, type: 3}
-  pathPrefab: {fileID: 4437096562063022538, guid: 28a9f11bdabd727faa4d0c25b0497053, type: 3}
-  timeBetweenSpawn: 0.4
+  enemyPrefab: {fileID: 1998663138033954445, guid: e2e456d0dbf9185419ed1dc4e60a2ea4, type: 3}
+  pathPrefab: {fileID: 6724548399865340697, guid: 45b8f5535e12438fcbeb20ec67247f23, type: 3}
+  timeBetweenSpawn: 0.5
   spawnRandomizer: 0.3
   numberOfSpawns: 10
-  enemyMoveSpeed: 6.43
+  enemyMoveSpeed: 6.59

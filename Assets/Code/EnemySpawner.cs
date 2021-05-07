@@ -6,22 +6,39 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] List<WaveConfig> waveConfigs;
-    int startingWave = 0;
+    [SerializeField] int startingWave = 0;
+    [SerializeField] bool loopingWaves = false;
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        var currentWave = waveConfigs[startingWave];
-        
-        StartCoroutine(SpawnWaveEnemies(currentWave));
-
+        do
+        {
+            yield return StartCoroutine(SpawnAllWaves());
+        } 
+        while (loopingWaves);
     }
 
+    private IEnumerator SpawnAllWaves()
+    {
+        for (int waveIndex = startingWave; waveIndex < waveConfigs.Count; waveIndex++)
+        {
+            var currentWave = waveConfigs[waveIndex];
+            yield return StartCoroutine(SpawnWaveEnemies(currentWave));
+        }
+    }
     private IEnumerator SpawnWaveEnemies(WaveConfig theConfig)
     {
-        Instantiate(theConfig.GetEnemyPrefab(),
-                    theConfig.GetPathWaypoints()[0].transform.position,
-                    Quaternion.identity);
+        for (int i = 0; i < theConfig.GetNumberOfSpawns(); i++)
+        {
+            var currentEnemy = Instantiate(theConfig.GetEnemyPrefab(),
+                        theConfig.GetPathWaypoints()[0].transform.position,
+                        Quaternion.identity);
+            //this way we control wave settings in the waveconfigs (Assets/Waves/waveconfigs) 
+            //rather than variables in the scripts. 
+            currentEnemy.GetComponent<EnemyPathing>().SetWaveConfig(theConfig);
 
-        yield return new WaitForSeconds(theConfig.GetTimeBetweenSpawn());
+            yield return new WaitForSeconds(theConfig.GetTimeBetweenSpawn());
+            
+        }
     }
 }
