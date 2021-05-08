@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1998663138033954450}
   - component: {fileID: 653241104}
   - component: {fileID: 670224203689012063}
-  m_Layer: 0
+  - component: {fileID: -8998027405730668962}
+  m_Layer: 8
   m_Name: Boris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,3 +115,31 @@ MonoBehaviour:
   maxTimeBetweenShots: 2
   enemyFireSpeed: 10
   enemyFire: {fileID: 1078642756112121743, guid: 89f062faedd3d33b2ae338349b1c19a5, type: 3}
+  deathVFX: {fileID: 3121847219011696124, guid: f5fbdd99fba33c94cba4f486a2490313, type: 3}
+  durationOfDeath: 1
+--- !u!61 &-8998027405730668962
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998663138033954445}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0019173473, y: 0.023008168}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.03, y: 0.84}
+    newSize: {x: 1.03, y: 0.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.65803444, y: 0.6636039}
+  m_EdgeRadius: 0

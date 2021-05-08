@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] float enemyFireSpeed = 10f;
     [SerializeField] GameObject enemyFire;
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float durationOfDeath = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,16 +44,26 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
+        if (!damageDealer) { return; } //if the object colliding with this has no damage dealer, protect against null ref errors.
         ProcessHit(damageDealer);
     }
 
     private void ProcessHit(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
+        damageDealer.Hit(); //removes projectile
 
         if (health <= 0)
         {
+            Die();
+        }
+    }
+
+    private void Die() {
+        {
             Destroy(gameObject);
+            GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
+            Destroy(explosion, durationOfDeath);
         }
     }
 }

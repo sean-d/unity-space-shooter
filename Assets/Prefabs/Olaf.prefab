@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 1998663138033954451}
   - component: {fileID: 1998663138033954450}
   - component: {fileID: 653241104}
-  m_Layer: 0
+  - component: {fileID: 5561998165095375202}
+  - component: {fileID: 5593891302386761337}
+  m_Layer: 8
   m_Name: Olaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,3 +97,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc77e2663892286388d27909b1723676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5561998165095375202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998663138033954445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d0e0d302f449336ae84e15ea66466a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  shotCounter: 0
+  minTimeBetweenShots: 1
+  maxTimeBetweenShots: 3
+  enemyFireSpeed: 10
+  enemyFire: {fileID: 2309015717958125684, guid: 77255d7bbc073916993bd3695ab112e4, type: 3}
+--- !u!61 &5593891302386761337
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998663138033954445}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.004793346, y: -0.06518981}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.97, y: 0.84}
+    newSize: {x: 1.03, y: 0.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6076213, y: 0.7134549}
+  m_EdgeRadius: 0

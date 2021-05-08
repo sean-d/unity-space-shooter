@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9081232057890716153}
   - component: {fileID: -8235352828898121785}
   - component: {fileID: 8780841450738628673}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BorisFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.028721228, y: -0.015846223}

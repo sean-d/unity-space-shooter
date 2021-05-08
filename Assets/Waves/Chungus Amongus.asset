@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1dccdf1005fb8329d8ce7164b8f912, type: 3}
+  m_Name: Chungus Amongus
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1998663138033954445, guid: 533647b422e774bb29d012decbe62ab2, type: 3}
+  pathPrefab: {fileID: 4437096562063022538, guid: 20b99634f2ca9267da36586589aa931a, type: 3}
+  timeBetweenSpawn: 1
+  spawnRandomizer: 0.3
+  numberOfSpawns: 5
+  enemyMoveSpeed: 2

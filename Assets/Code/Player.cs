@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject playerBlueLazer;
     [SerializeField] float playerLazerSpeed = 20.0f;
     [SerializeField] float playerShotTimeBeweenShots = 0.1f;
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float durationOfDeath = 1f;
 
     Coroutine KBFiringCoroutine;
     Coroutine GamePadFiringCoroutine;
@@ -41,16 +43,25 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
+        if (!damageDealer) { return; } //if the object colliding with this has no damage dealer, protect against null ref errors.
         ProcessHit(damageDealer);
     }
 
     private void ProcessHit(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
+        damageDealer.Hit(); //removes projectile
 
         if (health <= 0)
         {
+            Die();
+        }
+    }
+    private void Die() {
+        {
             Destroy(gameObject);
+            GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
+            Destroy(explosion, durationOfDeath);
         }
     }
 
@@ -98,8 +109,8 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        float getXPos = transform.position.x + Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
-        float getYPos = transform.position.y + Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
+        float getXPos = transform.position.x + Input.GetAxisRaw("Horizontal") * Time.deltaTime * moveSpeed;
+        float getYPos = transform.position.y + Input.GetAxisRaw("Vertical") * Time.deltaTime * moveSpeed;
 
         float newXPos = Mathf.Clamp(getXPos, playerXMin + playerWidth, playerXMax - playerWidth);
         float newYPos = Mathf.Clamp(getYPos, playerYMin + playerHeight, playerYMax - playerHeight);
