@@ -103,6 +103,8 @@ MonoBehaviour:
   playerShotTimeBeweenShots: 0.1
   deathVFX: {fileID: 4142948061262483813, guid: 70f4a2ee19ebeb241a70f1564122f758, type: 3}
   durationOfDeath: 1
+  deathSFX: {fileID: 8300000, guid: 01e3cd3fead2cf8ddabbb88e22c5b08f, type: 3}
+  volumeDeathSFX: 0.5
 --- !u!61 &-3956793669668970764
 BoxCollider2D:
   m_ObjectHideFlags: 0

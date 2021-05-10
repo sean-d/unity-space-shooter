@@ -117,6 +117,10 @@ MonoBehaviour:
   enemyFire: {fileID: 1078642756112121743, guid: 89f062faedd3d33b2ae338349b1c19a5, type: 3}
   deathVFX: {fileID: 3121847219011696124, guid: f5fbdd99fba33c94cba4f486a2490313, type: 3}
   durationOfDeath: 1
+  deathSFX: {fileID: 8300000, guid: 128c46a6569def5bd84666ec2ab7e7a1, type: 3}
+  volumeDeathSFX: 0.5
+  shootSFX: {fileID: 8300000, guid: 0aa0f1e9fb1fdc77ab403bb546cbc70d, type: 3}
+  volumeShootSFX: 0.5
 --- !u!61 &-8998027405730668962
 BoxCollider2D:
   m_ObjectHideFlags: 0

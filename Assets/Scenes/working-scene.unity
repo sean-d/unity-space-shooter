@@ -325,12 +325,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5612452804101965550, guid: 19b06cd1374367f7ea316d3eb0a6579a, type: 3}
       propertyPath: startingWave
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5612452804101965550, guid: 19b06cd1374367f7ea316d3eb0a6579a, type: 3}
       propertyPath: waveConfigs.Array.size
-      value: 13
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5612452804101965550, guid: 19b06cd1374367f7ea316d3eb0a6579a, type: 3}
+      propertyPath: waveConfigs.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 02a0c9f979ee9af7895f1285127e38df, type: 2}
     - target: {fileID: 5612452804101965550, guid: 19b06cd1374367f7ea316d3eb0a6579a, type: 3}
       propertyPath: waveConfigs.Array.data[12]
       value: 

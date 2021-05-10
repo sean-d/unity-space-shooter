@@ -15,9 +15,12 @@ public class Player : MonoBehaviour
     [SerializeField] float playerShotTimeBeweenShots = 0.1f;
     [SerializeField] GameObject deathVFX;
     [SerializeField] float durationOfDeath = 1f;
+    [SerializeField] AudioClip deathSFX;
+    [SerializeField] float volumeDeathSFX = .5f;
 
     Coroutine KBFiringCoroutine;
     Coroutine GamePadFiringCoroutine;
+
     // Boundaries for player movement on the board
     float playerXMin;
     float playerXMax;
@@ -59,9 +62,11 @@ public class Player : MonoBehaviour
     }
     private void Die() {
         {
+            FindObjectOfType<LevelControl>().EndGame();
             Destroy(gameObject);
             GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
             Destroy(explosion, durationOfDeath);
+            AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeDeathSFX);
         }
     }
 
