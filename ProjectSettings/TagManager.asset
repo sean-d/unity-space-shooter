@@ -16,7 +16,7 @@ TagManager:
   - Enemy
   - Enemy Projectile
   - UFO
-  - 
+  - Meteor
   - 
   - 
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Projectiles
+    uniqueID: 4167304491
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

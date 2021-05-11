@@ -62,11 +62,11 @@ public class Player : MonoBehaviour
     }
     private void Die() {
         {
-            FindObjectOfType<LevelControl>().EndGame();
             Destroy(gameObject);
             GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
             Destroy(explosion, durationOfDeath);
             AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeDeathSFX);
+            FindObjectOfType<LevelControl>().EndGame();
         }
     }
 
@@ -75,6 +75,11 @@ public class Player : MonoBehaviour
         KBFire();
         GamePadFire();
 
+    }
+
+    public float GetPlayerHealth()
+    {
+        return health;
     }
 
     private void KBFire()

@@ -43,7 +43,8 @@ public class EnemyPathing : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            currentWaypoint = 0;
         }
     }
 }

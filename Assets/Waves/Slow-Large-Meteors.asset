@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1dccdf1005fb8329d8ce7164b8f912, type: 3}
-  m_Name: Start Wave Left 1
+  m_Name: Slow-Large-Meteors
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1998663138033954445, guid: 03ce69696f2cdeeec967c9e26e4a1f5e, type: 3}
-  pathPrefab: {fileID: 4204863141037061962, guid: 0b37bd669adcbcf9da5fa111a4b8ef05, type: 3}
-  timeBetweenSpawn: 0.4
+  enemyPrefab: {fileID: 1998663138033954445, guid: ba7a86887e025e5e595c1097ccd16f2f, type: 3}
+  pathPrefab: {fileID: 4204863141037061962, guid: a879c5191ed82035981cc8c8750a9a83, type: 3}
+  timeBetweenSpawn: 3
   spawnRandomizer: 0.3
   numberOfSpawns: 10
-  enemyMoveSpeed: 10
+  enemyMoveSpeed: 2
