@@ -53,7 +53,11 @@ public class Player : MonoBehaviour
     private void ProcessHit(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
-        damageDealer.Hit(); //removes projectile
+        
+        if (damageDealer.transform.name != "METEOR(Clone)") // this way the meteor is not nuked when it touches the player
+        {
+            damageDealer.Hit(); //removes projectile
+        }
 
         if (health <= 0)
         {
