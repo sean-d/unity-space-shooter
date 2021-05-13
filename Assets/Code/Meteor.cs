@@ -20,7 +20,6 @@ public class Meteor : MonoBehaviour
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
         if (damageDealer) //if the object colliding with this has no damage dealer, protect against null ref errors.
         { 
-            Debug.Log(damageDealer);
             ProcessHit(damageDealer);
         } else
         {
@@ -32,7 +31,6 @@ public class Meteor : MonoBehaviour
 
     private void ProcessHit(DamageDealer damageDealer)
     {
-        Debug.Log(damageDealer.GetDamage());
         health -= damageDealer.GetDamage();
         damageDealer.Hit(); //removes projectile
 
@@ -48,6 +46,7 @@ public class Meteor : MonoBehaviour
             GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
             Destroy(explosion, durationOfDeath);
             AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeDeathSFX);
+            GetComponent<Explode>().BreakApart();
             FindObjectOfType<GameSession>().AddToScore(killValue);
         }
     }

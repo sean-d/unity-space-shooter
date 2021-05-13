@@ -11,11 +11,12 @@ GameObject:
   - component: {fileID: 1998663138033954451}
   - component: {fileID: 1998663138033954450}
   - component: {fileID: 653241104}
-  - component: {fileID: 670224203689012063}
-  - component: {fileID: -8998027405730668962}
-  - component: {fileID: -3763446995310997309}
-  m_Layer: 8
-  m_Name: Boris
+  - component: {fileID: -6669166238539551225}
+  - component: {fileID: 5020004856951956343}
+  - component: {fileID: -5375743525719497375}
+  - component: {fileID: 3981566193822600372}
+  m_Layer: 10
+  m_Name: Right Fragment Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a14bd97982309abf6b908fd3e064da3a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 318300e5649e4c168abb7ae0d6cada79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.03, y: 0.84}
+  m_Size: {x: 29, y: 26}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -98,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc77e2663892286388d27909b1723676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &670224203689012063
+--- !u!114 &-6669166238539551225
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,24 +108,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 1998663138033954445}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d0e0d302f449336ae84e15ea66466a, type: 3}
+  m_Script: {fileID: 11500000, guid: 17dec03872630f433b91053771fe17d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 200
   killValue: 10
-  shotCounter: 0
-  minTimeBetweenShots: 0.3
-  maxTimeBetweenShots: 2
-  enemyFireSpeed: 10
-  enemyFire: {fileID: 1078642756112121743, guid: 89f062faedd3d33b2ae338349b1c19a5, type: 3}
   deathVFX: {fileID: 3121847219011696124, guid: f5fbdd99fba33c94cba4f486a2490313, type: 3}
   durationOfDeath: 1
   deathSFX: {fileID: 8300000, guid: 128c46a6569def5bd84666ec2ab7e7a1, type: 3}
   volumeDeathSFX: 0.5
-  shootSFX: {fileID: 8300000, guid: 0aa0f1e9fb1fdc77ab403bb546cbc70d, type: 3}
-  volumeShootSFX: 0.5
---- !u!61 &-8998027405730668962
-BoxCollider2D:
+--- !u!114 &5020004856951956343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998663138033954445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdf69fe9fa2e45b484a179b519a7b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
+--- !u!50 &-5375743525719497375
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998663138033954445}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &3981566193822600372
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -136,30 +164,24 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0019173473, y: 0.023008168}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.03, y: 0.84}
-    newSize: {x: 1.03, y: 0.84}
+    oldSize: {x: 29, y: 26}
+    newSize: {x: 29, y: 26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.65803444, y: 0.6636039}
-  m_EdgeRadius: 0
---- !u!114 &-3763446995310997309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998663138033954445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4ad37955a076427fbeff7b61910dfe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFragment: {fileID: 0}
-  fragmentSpeed: 10
+  m_Points:
+    m_Paths:
+    - - {x: -0.2375, y: 0.5}
+      - {x: -0.5125, y: 0.45000002}
+      - {x: -0.5625, y: 0.35}
+      - {x: -0.5625, y: -0.22500001}
+      - {x: -0.38750002, y: -0.5}
+      - {x: 0.38750002, y: -0.5}
+      - {x: 0.5625, y: -0.125}
+      - {x: 0.5625, y: 0.32500002}
+      - {x: 0.3625, y: 0.5}

@@ -796,7 +796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5612452804101965550, guid: 19b06cd1374367f7ea316d3eb0a6579a, type: 3}
       propertyPath: loopingWaves
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5612452804101965550, guid: 19b06cd1374367f7ea316d3eb0a6579a, type: 3}
       propertyPath: startingWave
@@ -809,11 +809,11 @@ PrefabInstance:
     - target: {fileID: 5612452804101965550, guid: 19b06cd1374367f7ea316d3eb0a6579a, type: 3}
       propertyPath: waveConfigs.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: b2320c47873d255c1bba10b3f484b03e, type: 2}
+      objectReference: {fileID: 11400000, guid: 9a6ca745e477617cda6a476fb4a0f492, type: 2}
     - target: {fileID: 5612452804101965550, guid: 19b06cd1374367f7ea316d3eb0a6579a, type: 3}
       propertyPath: waveConfigs.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 91c115e02a2ec818cbcfee386bdfcfce, type: 2}
+      objectReference: {fileID: 11400000, guid: b2320c47873d255c1bba10b3f484b03e, type: 2}
     - target: {fileID: 5612452804101965550, guid: 19b06cd1374367f7ea316d3eb0a6579a, type: 3}
       propertyPath: waveConfigs.Array.data[12]
       value: 

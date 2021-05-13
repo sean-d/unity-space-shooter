@@ -30,12 +30,12 @@ public class UFO : MonoBehaviour
 
         if (shotCounter <= 0f)
         {
-            // Fire1();
-            // Fire2();
-            // Fire3();
-            // Fire4();
-            // Fire5();
-            // ShotCounter();
+            Fire1();
+            Fire2();
+            Fire3();
+            Fire4();
+            Fire5();
+            ShotCounter();
         }
     }
 
