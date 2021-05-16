@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5020004856951956343}
   - component: {fileID: -5375743525719497375}
   - component: {fileID: 3981566193822600372}
+  - component: {fileID: 5225970772300607286}
   m_Layer: 10
   m_Name: Left Fragment Small
   m_TagString: Untagged
@@ -185,3 +186,16 @@ PolygonCollider2D:
       - {x: 0.5625, y: -0.125}
       - {x: 0.5625, y: 0.32500002}
       - {x: 0.3625, y: 0.5}
+--- !u!114 &5225970772300607286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998663138033954445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e677888cd705d270970d756159c5d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedOfSpin: 1

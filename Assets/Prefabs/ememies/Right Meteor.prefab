@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 653241104}
   - component: {fileID: -6669166238539551225}
   - component: {fileID: 5020004856951956343}
-  - component: {fileID: 106886981029463349}
   - component: {fileID: -5375743525719497375}
-  - component: {fileID: 1805755914}
+  - component: {fileID: 5100887356876582417}
+  - component: {fileID: 1703166912438685801}
   m_Layer: 10
   m_Name: Right Meteor
   m_TagString: Untagged
@@ -131,7 +131,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1000
---- !u!60 &106886981029463349
+--- !u!50 &-5375743525719497375
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998663138033954445}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &5100887356876582417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998663138033954445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ad37955a076427fbeff7b61910dfe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathFragment: {fileID: 1998663138033954445, guid: 45f0457b264ee7aebb083922456c6de7, type: 3}
+  fragmentSpeed: 10
+--- !u!60 &1703166912438685801
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,52 +191,17 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.7510824, y: 1.8219883}
-      - {x: 1.4102405, y: 1.955658}
-      - {x: -0.104804546, y: 2.391575}
-      - {x: -0.5971286, y: 2.4919524}
-      - {x: -1.003108, y: 2.5039556}
-      - {x: -2.854946, y: 1.1793836}
-      - {x: -2.7838504, y: -0.8672306}
-      - {x: -2.1535325, y: -1.7315032}
-      - {x: -2.165915, y: -1.7686405}
-      - {x: -1.7780234, y: -2.1682646}
-      - {x: 1.3343673, y: -2.6502352}
-      - {x: 2.7339916, y: -0.3835683}
-      - {x: 2.8669488, y: 0.03417915}
-      - {x: 1.9869602, y: 1.6547561}
---- !u!50 &-5375743525719497375
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998663138033954445}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1805755914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998663138033954445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4ad37955a076427fbeff7b61910dfe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFragment: {fileID: 1998663138033954445, guid: 45f0457b264ee7aebb083922456c6de7, type: 3}
-  fragmentSpeed: 5
+    - - {x: 1.8080271, y: -1.1415136}
+      - {x: 2.3080273, y: -0.13490815}
+      - {x: 2.4165137, y: 0.0018527508}
+      - {x: 2.3080273, y: 0.22830272}
+      - {x: 1.1231189, y: 1.9915138}
+      - {x: -1.6382114, y: 2.0132108}
+      - {x: -1.6948164, y: 1.8113295}
+      - {x: -2.1995406, y: 0.16321087}
+      - {x: -2.3731189, y: -0.4896325}
+      - {x: -1.1382107, y: -1.8396326}
+      - {x: -0.86839455, y: -1.8830273}
+      - {x: 0.5316054, y: -1.3396326}
+      - {x: 1.2683946, y: -1.5245405}
+      - {x: 1.7363298, y: -1.4981189}

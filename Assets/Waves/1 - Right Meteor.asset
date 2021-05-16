@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1dccdf1005fb8329d8ce7164b8f912, type: 3}
   m_Name: 1 - Right Meteor
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1998663138033954445, guid: ba7a86887e025e5e595c1097ccd16f2f, type: 3}
+  enemyPrefab: {fileID: 1998663138033954445, guid: 9b5603218151ad2c189e5ff3c9ab5e7e, type: 3}
   pathPrefab: {fileID: 4204863141037061962, guid: 5e66210ae92bfcdc6889c1c8034b844c, type: 3}
   timeBetweenSpawn: 3
   spawnRandomizer: 0.3

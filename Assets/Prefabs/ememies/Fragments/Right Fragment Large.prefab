@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -5375743525719497375}
   - component: {fileID: 3981566193822600372}
   - component: {fileID: 46956778980789921}
+  - component: {fileID: 3923204910556069299}
   m_Layer: 10
   m_Name: Right Fragment Large
   m_TagString: Untagged
@@ -200,3 +201,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFragment: {fileID: 1998663138033954445, guid: 028af5629ca6ec1aeae3f638f2bbbaca, type: 3}
   fragmentSpeed: 5
+--- !u!114 &3923204910556069299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998663138033954445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e677888cd705d270970d756159c5d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedOfSpin: 1

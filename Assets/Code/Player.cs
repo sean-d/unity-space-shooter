@@ -45,6 +45,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // if (other.transform.name == "Player Health Boost")
+        // {
+        //     health += 100;
+        // }
+
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
         if (!damageDealer) { return; } //if the object colliding with this has no damage dealer, protect against null ref errors.
         ProcessHit(damageDealer);
