@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9081232057890716153}
   - component: {fileID: -8235352828898121785}
   - component: {fileID: 8780841450738628673}
+  - component: {fileID: 346325266591876349}
   m_Layer: 9
   m_Name: UfoFire
   m_TagString: Untagged
@@ -113,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bdf69fe9fa2e45b484a179b519a7b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 50
 --- !u!50 &8780841450738628673
 Rigidbody2D:
   serializedVersion: 4
@@ -135,3 +136,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &346325266591876349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078642756112121743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e677888cd705d270970d756159c5d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedOfSpin: 75

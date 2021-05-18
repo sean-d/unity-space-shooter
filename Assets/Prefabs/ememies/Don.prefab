@@ -110,11 +110,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  killValue: 10
   shotCounter: 0
   minTimeBetweenShots: 0.1
   maxTimeBetweenShots: 0.5
   enemyFireSpeed: 9.5
   enemyFire: {fileID: 8827929295467070057, guid: 1d1b8075447cc260283f2b518d833026, type: 3}
+  deathVFX: {fileID: 3121847219011696124, guid: 1a818c06b2fdb6098880f3c49920cce8, type: 3}
+  durationOfDeath: 1
+  deathSFX: {fileID: 8300000, guid: 128c46a6569def5bd84666ec2ab7e7a1, type: 3}
+  volumeDeathSFX: 0.5
+  shootSFX: {fileID: 8300000, guid: 0aa0f1e9fb1fdc77ab403bb546cbc70d, type: 3}
+  volumeShootSFX: 0.5
 --- !u!61 &3705218516681565752
 BoxCollider2D:
   m_ObjectHideFlags: 0

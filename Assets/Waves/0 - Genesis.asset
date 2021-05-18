@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1dccdf1005fb8329d8ce7164b8f912, type: 3}
+  m_Name: 0 - Genesis
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1750160439479379613, guid: d0a99e72e96ec32ab8131223f8b5586c, type: 3}
+  pathPrefab: {fileID: 4204863141037061962, guid: e5051dbba364a0e84bd420db53dfc40c, type: 3}
+  timeBetweenSpawn: 1
+  spawnRandomizer: 0.3
+  numberOfSpawns: 4
+  enemyMoveSpeed: 1

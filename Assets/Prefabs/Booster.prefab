@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5756916644f9a160f8e8bd488e521022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 1000
   dropCounter: 0
   minTimeBetweenDrops: 5
   maxTimeBetweenDrops: 20
