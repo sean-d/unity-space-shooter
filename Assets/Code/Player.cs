@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] float durationOfDeath = 1f;
     [SerializeField] AudioClip deathSFX;
     [SerializeField] float volumeDeathSFX = .5f;
+    [SerializeField] HealthBar healthBar;
 
     Coroutine KBFiringCoroutine;
     Coroutine GamePadFiringCoroutine;
@@ -28,6 +29,8 @@ public class Player : MonoBehaviour
     float playerYMax;
     float playerWidth;
     float playerHeight;
+    float xPos, yPos;
+    float maxHealth = 1000f;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +44,7 @@ public class Player : MonoBehaviour
     {
         Move();
         PlayerShoot();
+        healthBar.UpdateHealthBar();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -59,6 +63,12 @@ public class Player : MonoBehaviour
     {
         health -= damageDealer.GetDamage();
         
+        // to ensure the health drops don't push the player health above the max.
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+        healthBar.UpdateHealthBar();
         if (damageDealer.transform.name != "METEOR(Clone)") // this way the meteor is not nuked when it touches the player
         {
             damageDealer.Hit(); //removes projectile
@@ -89,6 +99,11 @@ public class Player : MonoBehaviour
     public float GetPlayerHealth()
     {
         return health;
+    }
+
+    public float GetPlayerMaxHealth()
+    {
+        return maxHealth;
     }
 
     private void KBFire()
@@ -129,12 +144,25 @@ public class Player : MonoBehaviour
     private void Move()
     {
         float getXPos = transform.position.x + Input.GetAxisRaw("Horizontal") * Time.deltaTime * moveSpeed;
+        xPos = Input.GetAxisRaw("Horizontal");
         float getYPos = transform.position.y + Input.GetAxisRaw("Vertical") * Time.deltaTime * moveSpeed;
+        yPos = Input.GetAxisRaw("Vertical");
 
         float newXPos = Mathf.Clamp(getXPos, playerXMin + playerWidth, playerXMax - playerWidth);
         float newYPos = Mathf.Clamp(getYPos, playerYMin + playerHeight, playerYMax - playerHeight);
 
+
         transform.position = new Vector2(newXPos, newYPos);
+    }
+
+    public float GetYPos()
+    {
+        return yPos;
+    }
+
+    public float GetXPos()
+    {
+        return xPos;
     }
 
     private void GetPlayerSize()

@@ -21,8 +21,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float durationOfDeath = 1f;
     [SerializeField] AudioClip deathSFX;
     [SerializeField] float volumeDeathSFX = .5f;
-    [SerializeField] AudioClip shootSFX;
-    [SerializeField] float volumeShootSFX = .5f;
+    //[SerializeField] AudioClip shootSFX;
+    //[SerializeField] float volumeShootSFX = .5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour
     {
         GameObject enemyFireProjectile = Instantiate(enemyFire, transform.position, Quaternion.identity) as GameObject;
         enemyFireProjectile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyFireSpeed);
-        AudioSource.PlayClipAtPoint(shootSFX, Camera.main.transform.position, volumeShootSFX);
+        //AudioSource.PlayClipAtPoint(shootSFX, Camera.main.transform.position, volumeShootSFX);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

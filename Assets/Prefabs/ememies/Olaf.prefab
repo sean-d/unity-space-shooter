@@ -120,7 +120,7 @@ MonoBehaviour:
   durationOfDeath: 1
   deathSFX: {fileID: 8300000, guid: 128c46a6569def5bd84666ec2ab7e7a1, type: 3}
   volumeDeathSFX: 0.5
-  shootSFX: {fileID: 8300000, guid: 0aa0f1e9fb1fdc77ab403bb546cbc70d, type: 3}
+  shootSFX: {fileID: 0}
   volumeShootSFX: 0.5
 --- !u!61 &5593891302386761337
 BoxCollider2D:
